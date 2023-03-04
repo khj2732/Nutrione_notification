@@ -17,7 +17,7 @@ class TrackingScreen extends StatelessWidget {
           actions: [
             IconButton(
               padding: const EdgeInsets.symmetric(
-                horizontal: Sizes.size32,
+                horizontal: Sizes.size36,
               ),
               onPressed: () {},
               icon: const FaIcon(
