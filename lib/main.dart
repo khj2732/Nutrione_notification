@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nuserver/constants/sizes.dart';
+import 'package:nuserver/features/noti_screen.dart';
 import 'package:nuserver/services/main_navigation.dart';
 
 void main() {
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Nutrione Server Notifications',
       theme: ThemeData(
+        //버튼 클릭시 번쩍이는 이벤트 없음
         splashColor: Colors.transparent,
         scaffoldBackgroundColor: Colors.white,
         primaryColor: const Color(0xFF45c91a),
@@ -29,10 +31,13 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
+      //최초 진입 페이지
       initialRoute: MainNavigationScreen.routeName,
       routes: {
+        //각각의 페이지 alias
         MainNavigationScreen.routeName: (context) =>
             const MainNavigationScreen(),
+        NotiScreen.routeName: (context) => const NotiScreen(),
       },
     );
   }
